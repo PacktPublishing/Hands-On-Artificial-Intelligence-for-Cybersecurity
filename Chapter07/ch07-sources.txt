@@ -1,0 +1,115 @@
+Rule-based IDPS:
+
+IF amount > $1,000 AND buying_frequency > historical_buying_frequency THEN fraud_likelihood = 90%
+
+IF distance(new_transaction, last_transaction) > 1000 km AND time_range < 30 min THEN block_transaction
+
+
+-------------
+
+Bagging Classifier example:
+
+from sklearn.tree import DecisionTreeClassifier
+
+from sklearn.ensemble import BaggingClassifier
+
+bagging = BaggingClassifier(
+            DecisionTreeClassifier(), 
+            n_estimators=300,
+            max_samples=100, 
+            bootstrap=True
+          )
+
+
+--------------
+
+Boosting with AdaBoost example:
+
+from sklearn.tree import DecisionTreeClassifier
+
+from sklearn.ensemble import AdaBoostClassifier
+
+
+adaboost = AdaBoostClassifier(
+              DecisionTreeClassifier(),
+              n_estimators=300
+           )
+
+
+----------------
+
+Gradient Boosting Classifier example:
+
+from sklearn.ensemble import GradientBoostingClassifier
+
+gradient_boost = GradientBoostingClassifier(
+                   max_depth=2, 
+                   n_estimators=100, 
+                   learning_rate=1.0,
+                   warm_start=True
+                 )
+
+
+-----------------
+
+eXtreme Gradient Boosting (Xgboost) Classifier example:
+
+from xgboost.sklearn import XGBClassifier
+
+xgb_model = XGBClassifier()
+
+
+-----------------
+
+Under-sampling with RandomUnderSampler:
+
+# From the Imbalanced-Learn library documentation:
+# https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.under_sampling.RandomUnderSampler.html
+
+from collections import Counter
+from sklearn.datasets import make_classification
+from imblearn.under_sampling import RandomUnderSampler 
+
+X, y = make_classification(n_classes=2, class_sep=2,
+ weights=[0.1, 0.9], n_informative=3, n_redundant=1, flip_y=0,
+n_features=20, n_clusters_per_class=1, n_samples=1000, random_state=10)
+print('Original dataset shape %s' % Counter(y))
+
+rus = RandomUnderSampler(random_state=42)
+X_res, y_res = rus.fit_resample(X, y)
+print('Resampled dataset shape %s' % Counter(y_res))
+
+
+Over-sampling with SMOTE:
+
+# From the Imbalanced-Learn library documentation:
+# https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.over_sampling.SMOTE.html
+
+from collections import Counter
+from sklearn.datasets import make_classification
+from imblearn.over_sampling import SMOTE 
+
+X, y = make_classification(n_classes=2, class_sep=2,
+   weights=[0.1, 0.9], n_informative=3, n_redundant=1, flip_y=0,
+   n_features=20, n_clusters_per_class=1, n_samples=1000,    
+   random_state=10)
+
+print('Original dataset shape %s' % Counter(y))
+Original dataset shape Counter({1: 900, 0: 100})
+
+sm = SMOTE(random_state=42)
+X_res, y_res = sm.fit_resample(X, y)
+print('Resampled dataset shape %s' % Counter(y_res))
+Resampled dataset shape Counter({0: 900, 1: 900})
+
+
+
+-----------------
+
+IBM Fraud Detection notebook available at:   
+https://github.com/IBM/xgboost-smote-detect-fraud/blob/master/notebook/Fraud_Detection.ipynb   
+(Source code Released under apache version 2 license: http://www.apache.org/licenses/LICENSE-2.0.txt)  
+
+
+
+
