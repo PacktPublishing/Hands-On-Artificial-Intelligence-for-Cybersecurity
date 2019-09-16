@@ -1,6 +1,6 @@
 # Hands-On Artificial Intelligence for Cybersecurity
 
-<a href="https://www.packtpub.com/in/data/hands-on-artificial-intelligence-for-cybersecurity?utm_source=github&utm_medium=repository&utm_campaign=9781789804027"><img src="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/9/7/9781789804027-original.jpeg" alt="Mastering Python for Finance - Second Edition" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/in/data/hands-on-artificial-intelligence-for-cybersecurity?utm_source=github&utm_medium=repository&utm_campaign=9781789804027"><img src="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/9/7/9781789804027-original.jpeg" alt="Hands-On Artificial Intelligence for Cybersecurity" height="256px" align="right"></a>
 
 This is the code repository for [Hands-On Artificial Intelligence for Cybersecurity](https://www.packtpub.com/in/data/hands-on-artificial-intelligence-for-cybersecurity?utm_source=github&utm_medium=repository&utm_campaign=9781789804027), published by Packt.
 
