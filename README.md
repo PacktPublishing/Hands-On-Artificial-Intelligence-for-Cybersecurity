@@ -55,6 +55,9 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * Hands-On Cybersecurity with Blockchain [[Packt]](https://www.packtpub.com/networking-and-servers/hands-cybersecurity-blockchain?utm_source=github&utm_medium=repository&utm_campaign=9781788990189) [[Amazon]](https://www.amazon.com/dp/B07DTB3SLX)
 
+## Errata 
+ * Page 37 (line 2):  **conda update –all** _should be_ **conda update ––all**
+ 
 ## Get to Know the Author
 **Alessandro Parisi**
 has been an IT professional for over 20 years, acquiring significant experience as a security data scientist, and as an AI cybersecurity and blockchain specialist. He has experience of operating within organizational and decisional contexts characterized by high complexity. Over the years, he has helped companies to adopt AI and blockchain DLT technologies as strategic tools in protecting sensitive corporate assets. He holds an MSc in economics and statistics.
